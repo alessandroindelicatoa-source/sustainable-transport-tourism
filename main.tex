@@ -1,0 +1,180 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,booktabs,graphicx}
+\usetheme{Madrid}
+\definecolor{navy}{HTML}{122A4B}
+\definecolor{teal}{HTML}{087E83}
+\setbeamercolor{structure}{fg=navy}
+\setbeamercolor{frametitle}{bg=navy,fg=white}
+\setbeamercolor{title}{fg=navy}
+\setbeamercolor{block title}{bg=teal,fg=white}
+\setbeamertemplate{navigation symbols}{}
+\title[Sustainable Transport and Tourism]{Sustainable Transport Systems\\and Mobility in Tourism}
+\subtitle{Concepts, quantitative models and interactive exercises}
+\author{Alessandro Indelicato}
+\date{November 2026}
+\begin{document}
+\begin{frame}[plain]\titlepage\end{frame}
+\begin{frame}{Course structure}\begin{enumerate}\item Transport greenhouse gas emissions\item Origin--destination vs destination mobility\item The rationale for flying\item Airport access and egress\item Environmental policy instruments\item Sustainable aviation\item Green airports\item High-speed rail\item Mobility as a Service\end{enumerate}\end{frame}
+\begin{frame}{How the practical sessions work}\begin{itemize}\item Start with a transport problem and define its assumptions.\item Change parameters in the Streamlit simulator.\item Interpret magnitudes, compare scenarios and discuss limitations.\item Distinguish illustrative calculations from empirical estimates.\end{itemize}\end{frame}
+\section{1. Transport greenhouse gas emissions}
+\begin{frame}{1. Transport greenhouse gas emissions}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{What is measured?}\begin{itemize}
+\item CO$_2$ and other greenhouse gases can be expressed as CO$_2$ equivalents.
+\item Organisational boundaries and operational scopes determine what is included.
+\item Compare total emissions and emissions per passenger-kilometre.
+\end{itemize}\end{frame}
+\begin{frame}{GHG accounting boundaries}\begin{itemize}
+\item Scope 1: direct emissions from owned or controlled sources.
+\item Scope 2: emissions associated with purchased energy.
+\item Scope 3: other indirect value-chain emissions; avoid double-counting within an inventory.
+\end{itemize}\end{frame}
+\begin{frame}{Activity-based accounting}\begin{itemize}
+\item Emissions = activity data $\times$ relevant emission factor.
+\item Document factor units, year, system boundary and uncertainty.
+\item Different modes require consistent occupancy and lifecycle assumptions.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Set activity levels and emission factors in the app.
+\item Calculate emissions by scope and compare a baseline with a reduction scenario.
+\end{itemize}\end{frame}
+\section{2. Tourism transport: O/D and destination mobility}
+\begin{frame}{2. Tourism transport: O/D and destination mobility}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Two mobility components}\begin{itemize}
+\item Origin--destination mobility links home and tourism destination.
+\item Intra-destination mobility describes travel after arrival.
+\item Their policy levers and accounting boundaries differ.
+\end{itemize}\end{frame}
+\begin{frame}{Tourism gravity model}\begin{itemize}
+\item $T_{ij}=k P_i^{\alpha} A_j^{\gamma}/D_{ij}^{\beta}$
+\item Population, attractiveness and distance enter through chosen elasticities.
+\item Calibrating a single observation identifies $k$ only when elasticities are fixed.
+\end{itemize}\end{frame}
+\begin{frame}{Interpreting gravity results}\begin{itemize}
+\item A 1\% increase in $P_i$ changes predicted flows by approximately $\alpha$\%.
+\item Changing $D_{ij}$ produces an inverse effect governed by $\beta$.
+\item Predictions are conditional on model assumptions, not causal estimates.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Calibrate the model on an illustrative route.
+\item Predict passenger flows after changing distance or destination appeal.
+\end{itemize}\end{frame}
+\section{3. The rationale for flying}
+\begin{frame}{3. The rationale for flying}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Why do people fly?}\begin{itemize}
+\item Travel time, price, convenience and available alternatives matter.
+\item Habits and perceived environmental consequences may also matter.
+\item Attitudes and behaviour need not coincide.
+\end{itemize}\end{frame}
+\begin{frame}{Discrete choice representation}\begin{itemize}
+\item $U_{im}=V_{im}+\varepsilon_{im}$
+\item $P_{im}=e^{V_{im}}/\sum_j e^{V_{ij}}$
+\item Coefficients in the simulator are pedagogical assumptions, not estimated preferences.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Compare modal choice probabilities when airfares and rail times change.
+\item Identify assumptions needed to infer real demand from surveys.
+\end{itemize}\end{frame}
+\section{4. Airport access and egress}
+\begin{frame}{4. Airport access and egress}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Access is part of the journey}\begin{itemize}
+\item Access: travel to the departure airport.
+\item Egress: travel from the arrival airport.
+\item Reliability, luggage and transfers can affect perceived convenience.
+\end{itemize}\end{frame}
+\begin{frame}{Generalised travel cost}\begin{itemize}
+\item $GC_m=C_m+VOT\,t_m+R_m$
+\item Monetary costs, time valuation and other penalties use consistent units.
+\item Travel time includes transfers, waiting and access legs if relevant.
+\end{itemize}\end{frame}
+\begin{frame}{Airport accessibility}\begin{itemize}
+\item Catchment areas depend on travel impedance and competing airports.
+\item Compare scenarios using generalised costs rather than distance alone.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Vary fares, travel time and the value of time for bus, taxi and rail.
+\item Find the lowest-cost mode under alternative passenger profiles.
+\end{itemize}\end{frame}
+\section{5. Environmental policy measures}
+\begin{frame}{5. Environmental policy measures}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Market-based instruments}\begin{itemize}
+\item An emissions tax prices pollution per tonne.
+\item Emissions trading fixes the quantity of allowances (subject to scheme design).
+\item A carbon price changes financial incentives; effects depend on response.
+\end{itemize}\end{frame}
+\begin{frame}{Carbon price arithmetic}\begin{itemize}
+\item $\text{Carbon cost}=E_{tCO_2}\times p_{\mathrm{EUR}/tCO_2}$
+\item Use an explicit baseline, coverage assumptions and pass-through rate.
+\item A tax calculation alone does not estimate behavioural change.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Set emissions and carbon prices.
+\item Explore changes in total payment and assumed fare pass-through.
+\end{itemize}\end{frame}
+\section{6. The agenda for sustainable aviation}
+\begin{frame}{6. The agenda for sustainable aviation}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Routes to lower emissions}\begin{itemize}
+\item Operational efficiency affects fuel use per flight.
+\item Sustainable aviation fuels may reduce lifecycle emissions depending on pathway.
+\item Demand growth can offset efficiency improvements.
+\end{itemize}\end{frame}
+\begin{frame}{Scenario accounting}\begin{itemize}
+\item $E_1=E_0(1+g)(1-r)$
+\item Here $g$ is passenger activity growth and $r$ is intensity reduction.
+\item This simple identity does not include non-CO$_2$ climate effects.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Compare growth and efficiency assumptions through 2050.
+\item Test whether absolute emissions rise or fall.
+\end{itemize}\end{frame}
+\section{7. Green airports}
+\begin{frame}{7. Green airports}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Airport carbon management}\begin{itemize}
+\item Inventory terminal electricity and direct airport operations.
+\item Distinguish airport-controlled sources from aircraft operators' sources.
+\item Measures include equipment electrification and electricity procurement.
+\end{itemize}\end{frame}
+\begin{frame}{Airport Carbon Accreditation}\begin{itemize}
+\item Levels cover progressively broader measurement and management requirements.
+\item An accreditation level is not a measure of the total climate impact of flying.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Construct an illustrative airport emissions inventory.
+\item Compare electricity, vehicles and equipment interventions.
+\end{itemize}\end{frame}
+\section{8. High-speed rail and integration}
+\begin{frame}{8. High-speed rail and integration}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{Competition and integration}\begin{itemize}
+\item Compare door-to-door journeys, not in-vehicle time alone.
+\item Rail--air integration requires schedules, ticketing and transfer arrangements.
+\item High-speed rail may replace or complement air connections.
+\end{itemize}\end{frame}
+\begin{frame}{Modal competition model}\begin{itemize}
+\item $V_m=-\beta_c C_m-\beta_t t_m$
+\item $P_m=e^{V_m}/\sum_j e^{V_j}$
+\item Numerical parameters are illustrative and are not estimated from data.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Change train and air prices, times and first/last-mile costs.
+\item Compare predicted shares and discuss model limitations.
+\end{itemize}\end{frame}
+\section{9. Mobility as a Service}
+\begin{frame}{9. Mobility as a Service}\centering\Large Concepts and interactive practice\end{frame}
+\begin{frame}{What MaaS integrates}\begin{itemize}
+\item Information, journey planning, booking, payment and travel entitlements.
+\item Packages may combine collective and shared mobility options.
+\item Operators, public authorities and platform providers have different roles.
+\end{itemize}\end{frame}
+\begin{frame}{Bundles and user costs}\begin{itemize}
+\item $GC=\text{subscription}+\text{out-of-bundle charges}+VOT\times t$
+\item Compare bundles with individually purchased trips.
+\item Financial savings and reductions in vehicle travel are different outcomes.
+\end{itemize}\end{frame}
+\begin{frame}{Classroom exercise}\begin{itemize}
+\item Build a monthly tourist mobility bundle.
+\item Test break-even usage and compare individual ticket costs.
+\end{itemize}\end{frame}
+\begin{frame}{Discussion}\begin{itemize}\item Which parameter change was most consequential?\item Which assumptions could be tested empirically?\item What additional data would a policymaker need?\end{itemize}\end{frame}
+\end{document}
