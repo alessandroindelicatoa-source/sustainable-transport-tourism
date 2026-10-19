@@ -171,3 +171,6 @@ else:
 
 st.divider()
 st.caption('Methodological note: results are deterministic demonstrations. No external datasets, location tracking, or individual passenger data are used.')
+
+from advanced import render_advanced
+render_advanced(lesson)
